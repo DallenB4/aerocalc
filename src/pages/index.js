@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Switch } from "@headlessui/react"
 import "../scripts/data"
-import { assistAnimalsAWU, bagWeights, checkedBagWeights, childrenAWU, lapChildrenAWU, passengerAWU } from "../scripts/data"
+import { assistAnimalsAWU, childrenAWU, lapChildrenAWU, passengerAWU } from "../scripts/data"
 
 const SeasonSwitch = ({ enabled, onChange }) => {
   return (
@@ -57,6 +57,7 @@ const IndexPage = () => {
     <main className="flex flex-col items-center flex-wrap min-h-screen min-w-screen py-2 bg-neutral-400">
       <h1 className="font-sans text-4xl text-neutral-700 py-4 font-semibold">Aerocalc</h1>
       <SeasonSwitch onChange={handleSeasonToggle} enabled={!isWinter} />
+      <p>Test</p>
       <div className="flex flex-wrap">
         <ZoneInput zone={1} isWinter={isWinter} />
         <ZoneInput zone={2} isWinter={isWinter} />
